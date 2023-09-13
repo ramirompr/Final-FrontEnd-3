@@ -1,20 +1,28 @@
+
 import React from "react";
+import { Link } from "react-router-dom";
+import { useOdoStates } from '../Context/Context'
+import './Estilos/Card.css';
 
+const Card = ({ odontologo }) => {
 
-const Card = ({ name, username, id }) => {
+  const {favs, setFavs} = useOdoStates()
 
-  const addFav = ()=>{
-    // Aqui iria la logica para agregar la Card en el localStorage
-  }
+  
 
   return (
     <div className="card">
-        {/* En cada card deberan mostrar en name - username y el id */}
+        {/* En cada card deberan mostrar en name - username y el id /}
 
-        {/* No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle */}
+        {/ No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle /}
 
-        {/* Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
-        <button onClick={addFav} className="favButton">Add fav</button>
+        {/ Ademas deberan integrar la logica para guardar cada Card en el localStorage */}
+        <Link to={'/detail/' + odontologo.id}>  
+            <h2 className="dataCard">Name: {odontologo.name}</h2>
+            <img src="/images/doctor.jpg" alt="" className="card-image"/>
+            <h3 className="dataCard">Username: {odontologo.username}</h3>
+        </Link>
+        <button onClick={() => setFavs((prevFavs) => [...prevFavs, odontologo])} className="favButton">Add fav</button>
     </div>
   );
 };

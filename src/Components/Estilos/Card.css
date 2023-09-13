@@ -1,0 +1,13 @@
+.card-image{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.dataCard{
+    font-size: 18px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}

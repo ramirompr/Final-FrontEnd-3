@@ -12,15 +12,24 @@ code {
     monospace;
 }
 .favButton{
-  background-color: rgba(136, 136, 136, 0.116);
+  background-color: rgba(0, 0, 0, 0.521);
   padding: 10px;
   border: none;
   width: 100%;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 800;
+  color: #dddddd;
 }
 
 h1{
-  text-align: center;
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  text-align: center; 
+  color: #333; 
+  margin-top: 20px; 
+  
 }
 
 nav{
@@ -37,7 +46,7 @@ a{
   cursor: pointer;
 }
 a:hover{
-  color: rgb(136, 136, 136);
+  color: rgb(78, 119, 231);
 } 
 
 footer {
@@ -70,18 +79,22 @@ form{
   margin: 0 auto;
 }
 
-.card{
+.card {
+  width: 300px; 
+  background-color: #a3a3c2; 
+  border: 1px solid #ccc; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px; 
+  padding: 20px; 
+  text-align: center;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-direction: column;
-  align-items: center;
-  width: 200px;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  border: 0.5px solid rgb(136, 136, 136);
 }
 
 .card:hover{
-  border: 0.5px solid rgb(206, 217, 142);
+  border: 0.5px solid rgb(255, 255, 255);
 }
 
 .card-grid{
