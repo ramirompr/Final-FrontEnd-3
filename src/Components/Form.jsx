@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './Estilos/Contact.css'
 
 
 const Form = () => {
@@ -26,11 +27,11 @@ const handleSubmit = (e) => {
   return (
     <div>
       <form>
-        <input onChange ={(event) => setCliente({...cliente,nombre: event.target.value})} type="text" placeholder="ingrese su nombre"/>
-        <input type="text" onChange ={(event) => setCliente({...cliente,email: event.target.value})} placeholder="ingrese su email"/>
-        <button onClick={handleSubmit}>Enviar</button>
-        {enviado && <h3>Gracias {cliente.nombre}, te contactaremos cuanto antes vía mail </h3>}
-        {error && <h3 style={{color: 'red'}}>Por favor verifique su información nuevamente</h3>}
+        <input onChange ={(event) => setCliente({...cliente,nombre: event.target.value})} type="text" placeholder="Enter your name"/>
+        <input type="text" onChange ={(event) => setCliente({...cliente,email: event.target.value})} placeholder="Enter your email"/>
+        <button className="formButton" onClick={handleSubmit}>Send</button>
+        {enviado && <h3>Thank you {cliente.nombre}, we will contact you as soon as possible via email. </h3>}
+        {error && <h3 style={{color: 'red'}}>There was an error, please check the information you provided.</h3>}
       </form>
     </div>
   );
