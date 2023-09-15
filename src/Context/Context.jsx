@@ -30,8 +30,7 @@ const Context = ({children}) => {
     useEffect(() => {
         localStorage.setItem('favs', JSON.stringify(favs))
     },[favs])
-
-
+    
     return (
         <OdoStates.Provider value={{odontologos,favs,setFavs}}>
             {children}
@@ -40,5 +39,6 @@ const Context = ({children}) => {
 }
 
 export default Context
+
 
 export const useOdoStates = () => useContext(OdoStates)
