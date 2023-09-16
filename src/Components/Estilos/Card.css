@@ -11,3 +11,20 @@
     text-align: center;
     justify-content: center;
 }
+
+.dark-theme {
+    background-color: #333333; 
+    color: #ffffff; 
+  }
+  
+  .light-theme {
+    background-color: #ffffff; 
+    color: #333333; 
+  }
+
+.homeTitle{
+  margin-top: 120px;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 100;
+}

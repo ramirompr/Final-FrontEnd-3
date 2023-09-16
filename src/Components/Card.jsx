@@ -4,14 +4,20 @@ import { Link } from "react-router-dom";
 import { useOdoStates } from '../Context/Context'
 import './Estilos/Card.css';
 
+
 const Card = ({ odontologo }) => {
 
   const {favs, setFavs} = useOdoStates()
-
   
+  const { state, dispatch } = useOdoStates();
+
+  const toggleTheme = () => {
+    dispatch({ type: 'TOGGLE_THEME' });
+  };
+
 
   return (
-    <div className="card">
+    <div className={`card ${state.theme === 'light' ? 'light-theme' : 'dark-theme'}`}>
         {/* En cada card deberan mostrar en name - username y el id /}
 
         {/ No debes olvidar que la Card a su vez servira como Link hacia la pagina de detalle /}

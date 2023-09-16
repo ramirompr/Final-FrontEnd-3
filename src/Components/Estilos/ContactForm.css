@@ -33,3 +33,14 @@
 .formPlaceholder{
     margin: 5px;
 }
+
+.dark-theme {
+    background-color: #333333; 
+    color: #ffffff; 
+  }
+  
+  .light-theme {
+    background-color: #ffffff; 
+    color: #333333; 
+  }
+  

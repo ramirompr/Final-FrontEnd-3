@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './Estilos/ContactForm.css'
+import { useOdoStates } from '../Context/Context';
 
 
 const Form = () => {
@@ -26,6 +27,12 @@ const handleSubmit = (e) => {
     }
 }
   
+const { state, dispatch } = useOdoStates();
+
+const toggleTheme = () => {
+  dispatch({ type: 'TOGGLE_THEME' });
+};
+
   return (
     <div className="formBox">
       <form>

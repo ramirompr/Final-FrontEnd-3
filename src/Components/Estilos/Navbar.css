@@ -11,8 +11,18 @@
     height: 40px;
 }
 
-.themeButton{
-    font-size: 1.3rem;
-    font-weight: 600;
+.theme-button{
+    font-size: 1.2rem;
+    font-weight: 400;
     border-radius: 10px;
 }
+
+.dark-theme {
+    background-color: #333333; 
+    color: #ffffff; 
+  }
+  
+  .light-theme {
+    background-color: #ffffff; 
+    color: #333333; 
+  }
